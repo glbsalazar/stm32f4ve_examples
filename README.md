@@ -11,4 +11,5 @@ To run any of the examples:
 * cargo run --release --bin <binary_name>
 
 This will include debugging and logs from the semihosting crate.
+
 Check this link for more documentation: https://rust-embedded.github.io/book/start/semihosting.html
