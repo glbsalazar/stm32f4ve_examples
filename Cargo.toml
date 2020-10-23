@@ -1,0 +1,39 @@
+[package]
+name = "stm32f4ve_examples"
+version = "0.1.0"
+authors = ["G. Salazar <glbsalazar@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[dependencies]
+cortex-m = "0.6"
+cortex-m-rt = "0.6"
+cortex-m-semihosting = "0.3.5"
+# sd card dependencies
+embedded-sdmmc = { path = "../embedded-sdmmc-rs" }
+# draw dependencies
+ssd1306 = "0.4.0"
+embedded-graphics = "0.6"
+stm32-eth = { version = "0.2", features = ["stm32f407", "smoltcp-phy", "log"], path = "../stm32-eth" }
+log = { version = "0.4"}
+usb-device = "0.2"
+usbd-serial = "0.1"
+usbd_scsi = "0.1"
+usbd_mass_storage = "0.1"
+# Panic behaviour, see https://crates.io/keywords/panic-impl for alternatives
+panic-halt = "0.2"
+
+[dependencies.stm32f4xx-hal]
+version = "0.8"
+# microcontroller definition, enable sdio and usb full speed 
+features = ["rt", "stm32f407", "sdio", "usb_fs"]
+path = "../stm32f4xx-hal"
+
+[dependencies.smoltcp]
+version = "0.6.0"
+default-features = false
+features = ["ethernet", "proto-ipv4", "socket-tcp", "socket-icmp"]
+
+[dependencies.panic-probe]
+git = "https://github.com/knurling-rs/probe-run"
+branch = "main"
