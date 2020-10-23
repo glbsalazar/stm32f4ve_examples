@@ -1,13 +1,3 @@
-// Example setup from
-// https://github.com/stm32-rs/stm32f4xx-hal/blob/master/examples/analog-stopwatch-with-spi-ssd1306.rs
-// https://jonathanklimt.de/electrics/programming/rust-STM32F103-blink/
-// stm32_rust project in the pc
-
-// TODO:
-// 2 buttons, 1 timer, 2 leds
-// SPI? UART?
-// I2C -> oled screen
-
 #![no_main]
 #![no_std]
 

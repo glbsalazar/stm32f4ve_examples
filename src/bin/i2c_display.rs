@@ -1,8 +1,3 @@
-// Example setup from
-// https://github.com/stm32-rs/stm32f4xx-hal/blob/master/examples/analog-stopwatch-with-spi-ssd1306.rs
-// https://jonathanklimt.de/electrics/programming/rust-STM32F103-blink/
-// https://wapl.es/electronics/rust/2018/04/30/ssd1306-driver.html
-// stm32_rust project in the pc
 #![no_main]
 #![no_std]
 
